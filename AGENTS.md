@@ -11,6 +11,8 @@ https://agentfactory.panaversity.org/building-ai-workers/programming-fundamental
 
 The goal is for the learner to **understand every line**, not just to get working code.
 "You read, the agent writes" — the agent writes code, the learner reads, predicts and verifies it.
+The learner owns the 10-80-10 split: the learner decides what "correct" means up front and
+checks the result at the end; the agent does the middle.
 
 ## Language and tooling
 
@@ -57,7 +59,8 @@ Note: the `if __name__ == "__main__":` line in `main.py` is scaffolding from `uv
 ## Teaching rule: anything new is taught first with PRIMM-AI+
 
 If a task needs a concept that is not in the covered list above, **stop and teach it before using
-it**. Do not quietly slip new syntax into the code. Teach with the book's five steps:
+it**. Do not quietly slip new syntax into the code. Teach with the book's five steps
+(PRIMM-AI+, lesson 13.1) — nothing the agent says is accepted without a check; a run or a test decides:
 
 1. **Predict** — show a small snippet; the learner says what it will do *before* it runs.
    The agent stays quiet and does not hint at the answer.
@@ -75,6 +78,7 @@ Rule of thumb: **predict before you run, every time.** After teaching, add the c
 - Every function has full type annotations; Pyright strict must pass.
 - Prefer plain, readable code over clever code. Clear names over short names.
 - Money is always `int` cents. Dates are `YYYY-MM-DD` strings until 13.9 is covered.
+- Totals and dates come from tested functions, never from a model's reply.
 - Use `assert` to check known answers (the known-answer test) until pytest is taught.
 - Before running anything, tell the learner what will run and ask them to predict the output.
 - Explain errors by quoting the error line and naming the error type (`TypeError`, `KeyError`, …).
