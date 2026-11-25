@@ -1,0 +1,18 @@
+[project]
+name = "mailroom"
+version = "0.1.0"
+description = "A learning project for Programming Fundamentals (The AI Agent Factory, Chapter 13)"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pyright>=1.1.414",
+    "ruff>=0.17.6",
+]
+
+[tool.pyright]
+typeCheckingMode = "strict"
+venvPath = "."
+venv = ".venv"
